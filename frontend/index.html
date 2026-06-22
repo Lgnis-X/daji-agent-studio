@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daji Agent Studio</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand-card">
+                <div class="avatar">妲</div>
+                <div>
+                    <h1>Daji Agent</h1>
+                    <p>狐族谋士型智能体</p>
+                </div>
+            </div>
+
+            <div class="model-pill">deepseek-chat / OpenAI Compatible</div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-num">8</span>
+                    <span class="stat-label">TOOLS</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">AGENT</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">∞</span>
+                    <span class="stat-label">CHAT</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">0.1</span>
+                    <span class="stat-label">VERSION</span>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <button class="menu-item active" data-page="chat">💬 御前对话</button>
+                <button class="menu-item" data-page="tools">🧰 工具札记</button>
+                <button class="menu-item" data-page="skills">📜 Skills</button>
+                <button class="menu-item" data-page="memory">🧠 Memory</button>
+                <button class="menu-item" data-page="todos">📝 Todo</button>
+                <button class="menu-item" data-page="settings">⚙️ Settings</button>
+            </nav>
+
+            <button id="clearBtn" class="clear-btn">清空当前记忆</button>
+
+            <div class="tip-box">
+                <strong>可试试：</strong>
+                <p>帮我查看当前 Python 版本</p>
+                <p>请读取 backend/agent.py，并解释它的核心流程</p>
+            </div>
+        </aside>
+
+        <main class="main-panel">
+            
+            <header class="topbar">
+                <div>
+                    <h2>御前对话</h2>
+                    <p>Daji Agent · Tool Calling Runtime</p>
+                </div>
+                <div id="statusBadge" class="status-badge">已就绪</div>
+            </header>
+
+            <section id="chatWindow" class="chat-window">
+                <div class="welcome-card welcome-hero">
+                    <div class="welcome-text">
+                        <div class="welcome-mini-badge">大内密令 · 妲己待命中</div>
+                        <div class="welcome-title">下旨即可开工。</div>
+                        <p>
+                            妾身已在此候命。可替主人查看项目目录、读取代码文件、
+                            查询 Python 环境，并逐步解释 Agent 的运行过程。
+                        </p>
+                    </div>
+
+                    <div class="welcome-illustration">
+                        <img src="/static/assets/welcome-room.png" alt="欢迎插图" />
+                    </div>
+                </div>
+            </section>
+
+            <footer class="input-area">
+                <textarea
+                    id="messageInput"
+                    placeholder="主人有何吩咐？例如：帮我查看当前 Python 版本"
+                    rows="1"
+                ></textarea>
+                <button id="sendBtn">发送</button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
