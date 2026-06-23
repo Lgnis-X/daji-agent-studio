@@ -1,5 +1,9 @@
 # Daji Agent Studio
 
+<p align="center">
+  <img src="docs/images/homepage.png" alt="Daji Agent Studio 首页截图" width="900">
+</p>
+
 Daji Agent Studio（妲己智能体工作台）是一个基于 FastAPI 和大模型 Tool Calling 的本地智能体项目。
 
 项目采用古风妲己主题界面，支持多轮对话、工具调用、Skills 技能包、长期记忆、Todo 任务规划和网页工作台展示。
